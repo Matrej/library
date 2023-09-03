@@ -3,31 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tLibrary & books</title>
+    <title>Library & books</title>
+    <link rel="icon" type="image/x-icon" href="img/icons8-books-quill-32.png">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <style>
-        table {
-            border: 2px solid black;
-            width: 100%;
-        }
-        td,th {border: 1px solid gray;}
-        thead {
-            background-color: beige;
-        }
-    </style>
+    
 </head>
 <body>
-    <img src="img/icons8-books-100.png" alt="books image">
-    <table class="library">
-        <thead>
-            <th>Name</th>
-            <th>Author</th>
-            <th># pages</th>
-            <th>read?</th>
-        </thead>
-        <tbody class="rows"></tbody>
-
-    </table>
-    <a target="_blank" href="https://icons8.com/icon/TRMsQVY0ppcl/books">Books</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    <div class="container">
+        <img src="img/icons8-books-100.png" alt="books image">
+        <table class="library">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Author</th>
+                    <th># pages</th>
+                    <th>read?</th>
+                </tr>
+            </thead>
+            <tbody class="rows"></tbody>
+        </table>
+        <button class="newRow">+ add record</button>
+        <a target="_blank" href="https://icons8.com/icon/TRMsQVY0ppcl/books">Books</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+    </div>
+    <div class="modal">
+        <div class="sidebar">
+            <button class="close">X close</button>
+            <h2>Add a new book record row</h2>
+            <form id="addNewRowForm">
+                <div class="item">
+                    <label for="title">Name:</label>
+                    <input id="title" type="text">
+                </div>
+                <div class="item">
+                    <label for="author">Author:</label>
+                    <input id="author" type="text">
+                </div>
+                <div class="item">
+                    <label for="pages">Number of pages:</label>
+                    <input id="pages" type="number">
+                </div>
+                <div class="item">
+                    <label for="read">Already read?</label>
+                    <input id="read" type="search">
+                </div>
+                <button type="submit" class="submit">ADD</button>
+            </form>
+        </div>
+        <div class="modalClose"></div>
+    </div>
 </body>
 </html>
